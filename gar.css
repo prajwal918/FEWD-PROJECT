@@ -1,0 +1,271 @@
+/* === Global Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* Same light yellow background */
+    background: linear-gradient(to bottom, #fef3c7 0%, #f9e7a0 50%, #f8d870 100%);
+    color: #777f89;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* === Header === */
+header#main-header {
+    height: 180px;
+    /* Same vibrant gradient */
+    background: linear-gradient(135deg, #f472b6 0%, #fb923c 50%, #fbbf24 100%);
+    position: relative;
+    overflow: hidden;
+
+    /* New styles for the header content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    color: white;
+}
+
+#main-header a,
+#main-header button {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s ease;
+}
+
+#main-header a:hover,
+#main-header button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#main-header img {
+    height: 16px; /* Adjust icon size as needed */
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+
+/* === Main Content Layout === */
+main#main-content {
+    max-width: 960px;
+    /* Same negative margin to overlap the header */
+    margin: -80px auto 4rem;
+    padding: 2rem;
+}
+
+/* === Glass Container Style === */
+/* Reusable style for post and comment section */
+article#post-123,
+section#comment-section {
+    background: rgba(95, 99, 104, 0.5);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    color: #f8fafc; /* Light text for dark background */
+}
+
+/* Add spacing between post and comments */
+section#comment-section {
+    margin-top: 2rem;
+}
+
+/* === Post Article Styles === */
+article#post-123 h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #f8fafc;
+}
+
+article#post-123 img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+article#post-123 p {
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Lighter gray for body text */
+    margin-bottom: 1.5rem;
+}
+
+/* === Post Actions (Upvote/Downvote) === */
+section.post-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+}
+
+.post-actions button,
+.post-actions a {
+    /* Style based on the "Cancel" button */
+    font-family: inherit;
+    background: transparent;
+    color: #f8fafc;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    
+    /* For icon + text */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.post-actions button:hover,
+.post-actions a:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.post-actions img {
+    height: 18px; /* Adjust icon size */
+}
+
+/* === Comment Section === */
+#comment-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+ul.comment-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+li.comment-item {
+    /* Style based on the dark form inputs */
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+}
+
+.comment-header .username {
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.comment-header .timestamp {
+    font-size: 0.85rem;
+    color: #94a3b8; /* Same as form labels */
+}
+
+.comment-body p {
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.comment-actions button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+.comment-actions button:hover {
+    color: #f8fafc;
+}
+
+/* === Footer === */
+footer {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Use light border for consistency */
+}
+
+footer a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.25s ease;
+}
+
+footer a:hover {
+    color: #6366f1; /* Use accent color from form focus */
+}
+
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+    main#main-content {
+        padding: 1rem;
+        margin-top: -100px; /* Adjust overlap for smaller screens */
+    }
+
+    article#post-123,
+    section#comment-section {
+        padding: 1.5rem;
+    }
+
+    article#post-123 h2 {
+        font-size: 2rem;
+    }
+
+    #comment-section h2 {
+        font-size: 1.5rem;
+    }
+
+    #main-header {
+        padding: 0 1rem;
+    }
+
+    /* Stack post actions on mobile */
+    .post-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .post-actions button,
+    .post-actions a {
+        justify-content: center; /* Center text/icon */
+    }
+}
