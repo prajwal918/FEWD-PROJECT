@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="userprofile.css">
+</head>
+<body>
+    <header>
+        <div class="profile-header">
+            <div class="profile-banner"></div>
+
+            <div class="profile-info">
+                <div class="profile-avatar">JD</div>
+
+                <div class="user-details">
+                    <h1>username</h1>
+                    <p class="display-name">Display Name</p>
+
+                    <div class="cake-day">
+                        <span>Member since January 2023</span>
+                    </div>
+
+                    <div class="bio-section">
+                        <p>Passionate about building meaningful connections and sharing creative ideas with the community.</p>
+                    </div>
+
+                    <div class="follow-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Followers</span>
+                            <span class="stat-value">342</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Following</span>
+                            <span class="stat-value">128</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <button type="button">Edit Profile</button>
+                    <button type="button">Follow</button>
+                    <button type="button">Message</button>
+                    <button type="button">Block</button>
+                    <button type="button" class="settings-btn" title="Settings">⚙️</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tabs-navigation">
+        <ul>
+            <li><a href="#overview" class="tab-link active" onclick="switchTab(event, 'overview')">Overview</a></li>
+            <li><a href="#posts" class="tab-link" onclick="switchTab(event, 'posts')">Posts</a></li>
+            <li><a href="#comments" class="tab-link" onclick="switchTab(event, 'comments')">Comments</a></li>
+            <li><a href="#saved" class="tab-link" onclick="switchTab(event, 'saved')">Saved</a></li>
+            <li><a href="#settings" class="tab-link" onclick="switchTab(event, 'settings')">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section class="tab-content">
+            <article id="overview" class="active">
+                <h2>Overview</h2>
+                <div class="overview-content">
+                    <p>Recent activity and highlights from this user.</p>
+                </div>
+            </article>
+
+            <article id="posts">
+                <h2>Posts</h2>
+                <div class="posts-content">
+                    <p>Your posts will appear here.</p>
+                </div>
+            </article>
+
+            <article id="comments">
+                <h2>Comments</h2>
+                <div class="comments-content">
+                    <p>Your comments will appear here.</p>
+                </div>
+            </article>
+
+            <article id="saved">
+                <h2>Saved</h2>
+                <div class="saved-content">
+                    <p>Your saved items will appear here.</p>
+                </div>
+            </article>
+
+            <article id="settings">
+                <h2>Settings</h2>
+                <div class="settings-grid">
+                    <div class="settings-section">
+                        <h3>Privacy</h3>
+                        <div class="settings-item">
+                            <label>Private Account</label>
+                            <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                        <div class="settings-item">
+                            <label>Allow Messages</label>
+                            <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                        <div class="settings-item">
+                            <label>Show Activity Status</label>
+                            <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Notifications</h3>
+                        <div class="settings-item">
+                            <label>Push Notifications</label>
+                            <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                        <div class="settings-item">
+                            <label>Email Notifications</label>
+                            <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                        <div class="settings-item">
+                            <label>Comment Alerts</label>
+                            <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Display</h3>
+                        <div class="settings-item">
+                            <label>Theme</label>
+                            <select class="settings-select">
+                                <option>Light</option>
+                                <option selected>Dark</option>
+                                <option>Auto</option>
+                            </select>
+                        </div>
+                        <div class="settings-item">
+                            <label>Compact Mode</label>
+                            <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Content</h3>
+                        <div class="settings-item">
+                            <label>Show NSFW Content</label>
+                            <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                        <div class="settings-item">
+                            <label>Blur Sensitive Content</label>
+                            <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Blocked Users</h3>
+                        <div class="settings-item">
+                            <label>Manage your blocked users list</label>
+                        </div>
+                        <button class="danger-btn">View Blocked List</button>
+                    </div>
+
+                    <div class="settings-section danger-zone">
+                        <h3>⚠ Danger Zone</h3>
+                        <p style="color: #94a3b8; margin-bottom: 1rem;">These actions cannot be undone. Please proceed with caution.</p>
+                        <button class="danger-btn">Deactivate Account</button>
+                        <button class="danger-btn">Delete Account</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <div class="sidebar-container">
+            <section class="sidebar-section">
+                <h3>About</h3>
+                <div class="info-item">
+                    <h4>Member Since</h4>
+                    <p>January 15, 2023</p>
+                </div>
+                <div class="info-item">
+                    <h4>Posts</h4>
+                    <p>42</p>
+                </div>
+                <div class="info-item">
+                    <h4>Comments</h4>
+                    <p>156</p>
+                </div>
+            </section>
+
+            <section class="sidebar-section">
+                <h3>Followers</h3>
+                <ul class="followers-list">
+                    <li><a href="#">@sarah_design</a></li>
+                    <li><a href="#">@tech_enthusiast</a></li>
+                    <li><a href="#">@creative_mind</a></li>
+                </ul>
+                <a href="#" class="view-all">View all 342 followers →</a>
+            </section>
+
+            <section class="sidebar-section">
+                <h3>Following</h3>
+                <ul class="following-list">
+                    <li><a href="#">@ui_designer</a></li>
+                    <li><a href="#">@web_developer</a></li>
+                    <li><a href="#">@product_maker</a></li>
+                </ul>
+                <a href="#" class="view-all">View all 128 following →</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Social Media Platform. All rights reserved.</p>
+        <nav>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+        </nav>
+    </footer>
+
+    <script>
+        function switchTab(event, tabId) {
+            event.preventDefault();
+            
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-content article').forEach(article => {
+                article.classList.remove('active');
+            });
+            
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
