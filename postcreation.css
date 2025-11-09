@@ -141,6 +141,7 @@ button {
     border-radius: 18px;
     padding: 16px;
     background: linear-gradient(180deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .02));
+    backdrop-filter: blur(5px);
 }
 
 .card h3 {
@@ -216,7 +217,7 @@ button {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, .15);
     background: #141414;
-    color: var(--ink);
+    color: white;
     cursor: pointer;
     transition: transform .05s ease, background .2s ease;
 }
@@ -253,4 +254,9 @@ button {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+#media::file-selector-button {
+    font-family: inherit;
+    background-color: #323232;
 }
