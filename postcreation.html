@@ -2,59 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Post</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create post.</title>
     <link rel="stylesheet" href="postcreation.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header></header>
+    <div class="bg-lines">
 
-    <main>
-        <section class="create-post-container">
-            <h1>Create a Post</h1>
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
 
-  <form id="create-post-form">
-    <label class = "form-element">Title:</label><br>
-    <input type="text" id="title" name="title" placeholder="Enter a catchy title" maxlength="140"><br><br>
+            <line x1="220" y1="90" x2="1520" y2="90" />
 
-    <label class = "form-element">Content:</label><br>
-    <textarea id="content" name="content" rows="6" placeholder="Write your post here..."></textarea><br><br>
+            <path d="M80,-40 L760,820" />
 
-    <label class = "form-element">Upload Media:</label><br>
-    <input type="file" id="media" name="media" accept="image/*,video/*" multiple><br><br>
+            <rect x="430" y="210" width="520" height="520" rx="40" ry="40" transform="rotate(52 690 470)" />
 
-    <label class = "form-element">Tags:</label><br>
-    <input type="text" id="tags" name="tags" placeholder="Add tags separated by commas"><br><br>
+            <circle cx="210" cy="970" r="240" />
 
-    <label class = "form-element">Visibility:</label><br>
-    <select id="visibility" name="visibility">
-      <option value="public">Public</option>
-      <option value="followers">Followers</option>
-      <option value="private">Private</option>
-    </select><br><br>
+            <circle cx="1410" cy="1060" r="260" />
 
-                <div>
-                    <label for="schedule" class = "form-element">Schedule Post</label>
-                    <input type="datetime-local" id="schedule" name="schedule" />
+            <path d="M-20,640 L580,1440" />
+            <path d="M780,530 L1540,1380" />
+        </svg>
+    </div>
+    <div class="container">
+        <header class="nav">
+
+            <nav class="links">
+                <a href="#">←</a>
+                <a href="#">home.</a>
+                <a href="#stories">stories.</a>
+                <a href="#explore">explore.</a>
+            </nav>
+
+            <div class="spacer"></div>
+
+            <div class="search">
+                <input id="search" type="search" placeholder="search" />
+            </div>
+
+            <div class="pfp">
+                <button id="pfpbut"></button>
+                <div class="menu" id="pfpmenu">
+                    <a href="#profile">profile.</a>
+                    <a href="#drafts">drafts.</a>
+                    <hr />
+                    <a href="#signout">sign out.</a>
                 </div>
+            </div>
+        </header>
 
-                <div class="form-buttons">
-                    <button type="submit">Publish</button>
-                    <button type="button">Save Draft</button>
+
+        <div class="cards">
+
+            <div class="aside-left card">
+                <h3>trending.</h3>
+                <div class="left-item">#trending1</div>
+                <div class="left-item">#trending2</div>
+                <div class="left-item">#trending3</div>
+            </div>
+
+            <!-- Center: Composer -->
+            <main class="main card">
+                <div class="composer">
+                    <h2>create post.</h2>
+
+                    <!-- YOUR FORM, styled -->
+                    <form id="create-post-form">
+                        <div>
+                            <label for="title">title.</label>
+                            <input type="text" id="title" name="title" placeholder="Enter a title" maxlength="140" />
+                        </div>
+
+                        <div>
+                            <label for="content">content.</label>
+                            <textarea id="content" name="content" rows="8" placeholder="Write your post"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="media">upload media.</label>
+                            <input type="file" id="media" name="media" accept="image/*,video/*" multiple />
+                        </div>
+
+                        <div>
+                            <label for="tags">tags.</label>
+                            <select name="tags" id="tags">
+                                <option value="meme">meme</option>
+                                <option value="work">work</option>
+                                <option value="personal">personal</option>
+                                <option value="study">study</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="schedule">schedule post.</label>
+                            <input type="datetime-local" id="schedule" name="schedule" />
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit">publish.</button>
+                            <button type="button" id="saveDraft">save draft.</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </section>
-    </main>
+            </main>
 
+            <!-- Right: Mirror card -->
+            <div class="aside-right card">
+                <h3>discover.</h3>
+                <div class="right-item">People you may like</div>
+                <div class="right-item">Communities for you</div>
+            </div>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2025 Social Media Platform. All rights reserved.</p>
-        <nav>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact</a>
-        </nav>
+
     </footer>
 </body>
 
