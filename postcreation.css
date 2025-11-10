@@ -1,4 +1,188 @@
 * {
+<<<<<<< Updated upstream
+=======
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #fef3c7, #f9e7a0, #f8d870);
+            color: #777f89;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            height: 180px;
+            background: linear-gradient(135deg, #f472b6, #fb923c, #fbbf24);
+        }
+
+        main {
+            max-width: 960px;
+            margin: -80px auto 4rem;
+            padding: 2rem;
+        }
+
+        .create-post-container {
+            background: rgba(95, 99, 104, 0.5);
+            backdrop-filter: blur(12px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 600;
+            color: #f8fafc;
+            font-size: 1rem;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="datetime-local"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            color: #f8fafc;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus,
+        input[type="datetime-local"]:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        input[type="file"] {
+            padding: 0.5rem 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        input[type="file"]::file-selector-button {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.5rem;
+            color: #f8fafc;
+            cursor: pointer;
+            margin-right: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+        }
+
+        button {
+            background: linear-gradient(135deg, #f472b6, #fb923c, #fbbf24);
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(241, 194, 99, 0.4);
+        }
+
+        footer {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 2rem 1rem 1rem;
+            text-align: center;
+            color: #64748b;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer nav {
+            margin-top: 1rem;
+        }
+
+        footer a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.25s ease;
+        }
+
+        footer a:hover {
+            color: #6366f1;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
+                margin-top: -60px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+=======
+>>>>>>> Stashed changes
     margin: 0;
     padding: 0;
     box-sizing: border-box;
