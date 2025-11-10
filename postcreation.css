@@ -156,7 +156,7 @@ button {
 }
 
 .composer h2 {
-    margin: 0 0 10px;
+    margin: 10px;
     font-size: clamp(28px, 3vw, 38px);
     font-weight: 800;
     letter-spacing: .3px;
@@ -166,7 +166,6 @@ button {
     grid-template-columns: 1fr;
     gap: 15px;
     padding: 15px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, .015));
     border: 1px solid rgba(255, 255, 255, .10);
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -259,4 +258,22 @@ button {
 #media::file-selector-button {
     font-family: inherit;
     background-color: #323232;
+}
+
+.block {
+    color: #555;
+    font-size: 12px;
+    display: none;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
+
+#media input::file-selector-button {
+    font-family: inherit;
+    background-color: #868484;
 }
