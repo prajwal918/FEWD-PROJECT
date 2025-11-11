@@ -94,6 +94,10 @@ function createPostElement(post) {
   const commentBtn = createActionButton('⎙', '0');
   const shareBtn = createActionButton('⌲', '0');
   
+  commentBtn.addEventListener('click', () => {
+    window.location.href = `post-comment.html?postId=${post.id}`;
+  });
+  
   actions.appendChild(likeBtn);
   actions.appendChild(commentBtn);
   actions.appendChild(shareBtn);
@@ -101,6 +105,13 @@ function createPostElement(post) {
   article.appendChild(header);
   article.appendChild(content);
   article.appendChild(actions);
+  
+  article.style.cursor = 'pointer';
+  article.addEventListener('click', (e) => {
+    if (!e.target.closest('.action-btn')) {
+      window.location.href = `post-comment.html?postId=${post.id}`;
+    }
+  });
   
   return article;
 }
