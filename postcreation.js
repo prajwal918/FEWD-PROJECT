@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
         
         if (response.ok) {
-          alert('Post created successfully!');
+  
           titleInput.value = '';
           contentInput.value = '';
           window.location.href = 'home.html';
         } else {
-          alert(`Error: ${data.error || 'Failed to create post'}`);
+          alert(`Error: ${data.error || 'im failed lol'}`);
         }
       } catch (error) {
         console.error('Error:', error);

@@ -93,41 +93,6 @@ button {
     background: radial-gradient(120% 120% at 20% 10%, #f2f2f2, #9e9e9e 60%, #6f6f6f);
 }
 
-.menu {
-    position: absolute;
-    right: 0;
-    top: 50px;
-    width: 200px;
-    background: #0f0f0f;
-    border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 15px;
-    padding: 8px;
-    display: none;
-}
-
-.menu a,
-.menu button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px 10px;
-    background: transparent;
-    color: #ffffff;
-    cursor: pointer;
-    border: 0;
-}
-
-.menu a:hover,
-.menu button:hover {
-    background: #000;
-}
-
-.menu hr {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    margin: 6px 0
-}
-
 .cards {
     display: grid;
     grid-template-columns: 280px 1fr 280px;
