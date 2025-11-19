@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1763542354912,
+    "title": "Hello",
+    "content": "Hello world",
+    "timestamp": "2025-11-19T08:52:34.912Z",
+    "comments": [
+      {
+        "id": 1763542391873,
+        "author": "Anonymous",
+        "text": "i like this post",
+        "time": "just now",
+        "timestamp": "2025-11-19T08:53:11.873Z"
+      }
+    ]
+  }
+]
