@@ -1,47 +1,29 @@
 # FEWD-PROJECT
 
-This repository is built with strict enterprise engineering standards, focusing on resilient architecture, graceful error handling, and robust continuous integration.
+An advanced full-stack web application meticulously restructured to embody continuous improvement, automation with a human touch, and simplicity.
 
-## 🏗️ System Architecture
-
-```mermaid
-graph TD
-    A[Client] --> B(Application Container)
-    B --> C{Core Logic}
-```
-
-## 🚀 Setup Instructions
-
-```bash
-docker-compose up --build -d
-```
-
-## 📂 Structure
-
-Following standard design patterns for a predictable layout.
-
----
-
-## Original Readme
-
-# FEWD-PROJECT
-
-This repository is built with strict enterprise engineering standards, focusing on resilient architecture, graceful error handling, and robust continuous integration.
-
-## 🏗️ System Architecture
+## Architecture
 
 ```mermaid
-graph TD
-    A[Client] --> B(Application Container)
-    B --> C{Core Logic}
+graph TD;
+    Client[Frontend Client - Nginx Port 8080] -->|HTTP GET/POST| Server[Node.js Backend - Port 3000];
+    Server -->|Read/Write| DB[(posts.json Data Store)];
 ```
 
-## 🚀 Setup Instructions
+## Setup & Deployment
 
-```bash
-docker-compose up --build -d
-```
+To spin up the entire application locally, you only need Docker and Docker Compose.
 
-## 📂 Structure
+1. Ensure Docker is running.
+2. Run the following command:
+   ```bash
+   docker-compose up --build
+   ```
+3. Visit `http://localhost:8080` for the frontend application.
+4. The backend API is available at `http://localhost:3000`.
 
-Following standard design patterns for a predictable layout.
+## Dependency Rationale
+
+- **Node.js**: Highly scalable, event-driven runtime perfect for I/O bound JSON manipulation.
+- **Nginx**: Industry-standard, ultra-fast static file serving.
+- **Docker & Docker Compose**: Guarantees isolated execution environments, preventing "it works on my machine" issues.

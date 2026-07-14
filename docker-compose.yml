@@ -1,8 +1,22 @@
 version: '3.8'
+
 services:
-  app:
-    build: .
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./src/backend/posts.json:/app/posts.json
+
+  frontend:
+    image: nginx:alpine
     ports:
       - "8080:80"
     volumes:
-      - .:/app
+      - ./src/frontend:/usr/share/nginx/html
+    depends_on:
+      - backend
